@@ -1,21 +1,52 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Stuart Lamour - User experience research, design, and developement.</title>
+
+        <meta property="og:title" content="Stuart Lamour - User experience research, design, and developement.">
+        <meta property="og:type" content="">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="pastal.svg">
+        <meta property="og:image:alt" content="">
+
+        <link rel="shortcut icon" href="unicorn.svg">
+        <meta name="theme-color" content="#262626">
+
+        <!-- Google fonts. -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
         <style>
+            html {
+                --body: #262626;
+                --bg: #F7F7F7;
+                --yellow: #FEF06E;
+                --orange: #ff611a;
+                --link: #A02267;
+            }
+
+            @media (prefers-color-scheme: dark) {
+                html {
+                    --body: #F7F7F7;
+                    --bg:  #262626;
+                    --link: #FEF06E;
+                }
+            }
+
             body {
                 font-family: "Noto Sans Mono", monospace;
                 font-weight: 500;
                 font-size: 16px;
                 line-height: 1.5;
-                color: #262626;
-                background-color: #F7F7F7;
+                color: var(--body);
+                background-color: var(--bg);
                 max-width: 1300px;
                 margin: auto;
-                padding: 3rem;
+                padding: 1rem;
             }
+
             .hero {
                 font-size: 6rem;
                 margin: 0;
@@ -32,13 +63,23 @@
                 font-size: 2rem;
                 margin: 0;
             }
-            .hero, h1, h2, h3, h4, h5, h6 {
+            .mono, .hero, h1, h2, h3, h4, h5, h6 {
                 font-family: "Gasoek One", sans-serif;
                 font-weight: 400;
                 font-style: normal;
             }
             a {
-                color: #A02267;
+                color: var(--link);
+                &:hover,
+                &:focus:not(:focus-visible) {
+                    color: var(--bg);
+                    background-color: var(--body);
+                    outline: 5px solid var(--body);
+                }
+                &:focus-visible {
+                    color: var(--body);
+                    outline: 3px solid var(--body);
+                }
             }
             .sticky {
                 position: sticky;
@@ -46,6 +87,7 @@
             }
             .d-flex {
                 display: flex;
+                align-items: center;
             }
             .a-center {
                 align-items: center;
@@ -74,82 +116,87 @@
             .m-r {
                 margin-right: .5rem;
             }
+            .center {
+                text-align: center;
+            }
             .orange {
-                color: #ff611a;
+                color: var(--orange);
             }
             .bg-orange {
-                background-color: #ff611a;
+                background-color: var(--orange);
             }
-        }
         </style>
      </head>
 <body>
 <div class="row a-center p-b">
     <div class="col">
+
         <h1 class="hero">Stuart Lamour</h1>
         <p class="d-flex lead">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="orange m-r" height="1.5em">
-            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clip-rule="evenodd" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="orange m-r" height="1.5em" aria-hidden="true">
+                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clip-rule="evenodd" />
             </svg>
             User experience research, design, and developement.
         </p>
         <p>
             Find me on:
-            <a href="https://www.linkedin.com/in/stuart-lamour/" target="_blank">Linkedin</a>
-            Github
-            Codepen
+            <a href="https://www.linkedin.com/in/stuart-lamour/" target="_blank">Linkedin</a> •
+            <a href="https://github.com/stuartlamour/" target="_blank">Github</a> •
+            <a href="https://codepen.io/thisismyrice/pens/public" target="_blank">Codepen</a>
 
         </p>
     </div>
 
-    <div class="col a-center">
-        <img src="pastal.svg" style="max-width: 66%; margin: auto;">
+    <div class="col">
+        <figure class="center">
+            <img src="pastal.svg" alt="" style="max-width: 66%; min-width: 300px;">
+            <figcaption>
+                <small><i>Vitruvius three qualities of firmitatis, utilitatis, and venustatis.</i></small>
+            </figcaption>
+        </figure>
     </div>
 
 </div>
 
 <div class="row p-t p-b">
-    <div class="col">
+    <div class="col p-t">
         <h2 class="sticky">What can I help with?</h2>
-
-        <!--
-            <img src="cardsorting.png" style="max-width: 66%; margin: auto;">
-        <br>
-        <img src="carddesign system.png" style="max-width: 66%; margin: auto;">
-        -->
     </div>
 
-    <div class="col">
+    <div class="col p-t">
         <h3 class="d-flex">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="orange m-r" height="1.5em">
-            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="orange m-r" height="1.5em" aria-hidden="true">
+                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" /></svg>
             UX research
         </h3>
         <p>Find out what your users think. Help your business goals and users needs align, plan functional and content requirements, design and test information architecture and usability. Make data-driven choices.
         </p>
 
         <h3 class="d-flex">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="orange m-r" height="1.5em">
-            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="orange m-r" height="1.5em" aria-hidden="true">
+                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" /></svg>
             Design systems
         </h3>
         <p>Evolve your unique visual design language. Create a living Atomic Design ecosystem of reusable components, guided by clear standards for your brand. Build in usability, accessability, typography, colour systems, navigation elements, information design, and interaction design. Create an extendable, future-friendly, and time-saving UI.
         </p>
 
         <h3 class="d-flex">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="orange m-r" height="1.5em">
-            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="orange m-r" height="1.5em" aria-hidden="true">
+                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" /></svg>
             Code & developement
         </h3>
-        <p>Impliment your ideas. From full sites with a CMS, to plugins, all using accessable, reusable, sustainable code, and user-centered design components in html, css, javascript, php, and sql.</p>
+        <p>Impliment your ideas. From full sites with a CMS, to plugins, all using accessable, reusable, sustainable code, and user-centered design components in HTML, CSS, JS, PHP, and SQL.</p>
     </div>
 </div>
 
 <div class="p-t">
-    <h2>About</h2>
+    <h2 class="d-flex a-center">
+        <img src="unicorn.svg" alt="" width="48" class="m-r">
+        About
+    </h2>
     <div class="lead">
         <p>I've been lucky enough to work with clients including The BBC, Gov.uk, MoMa, The British Museum, The National Portrait Gallery, The NHS, Capita, ARUP, and The Labour Party on digital services. I've created SaaS products for Blackboard, Avado, Titus, and many other e-learning partners. I've worked extensivly with universities and profesional developement providers including Sussex University, University of Strathclyde, The Royal College of GPs, The Royal College of Surgeons, Cass business school, and most recently University Colledge London (UCL) on their online learning.</p>
-        <p>I'm able to hit the ground running with most projects and use Jira and Github on a daily basis. I'm equally able to jump into LAMP/MAMP, python, or JS based project architecture and make an immediate impact on the front end.</p>
+        <p>I'm able to hit the ground running with most projects, and use Jira and Github on a daily basis. I'm equally able to jump into LAMP/MAMP, Python, or JS based project architecture and make an immediate impact on the front end design, usability and accessibility.
         <p>I'm happiest mentoring and fostering a culture of Agile UX practice, helping solve problems through lasting culture change, and creating products people really enjoy using.</p>
     </div>
 </div>
