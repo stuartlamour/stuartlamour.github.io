@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +11,7 @@
         <meta property="og:image" content="pastal.svg">
         <meta property="og:image:alt" content="">
 
-        <link rel="shortcut icon" href="unicorn.svg">
+        <link rel="shortcut icon" href="favicon.svg">
         <meta name="theme-color" content="#262626">
 
         <!-- Google fonts. -->
@@ -22,7 +22,9 @@
             html {
                 --body: #262626;
                 --bg: #F7F7F7;
+                --blue: #80C6FF;
                 --yellow: #FEF06E;
+                --pink: #FB64BA;
                 --orange: #ff611a;
                 --link: #A02267;
             }
@@ -126,6 +128,28 @@
             .bg-orange {
                 background-color: var(--orange);
             }
+            #venn {
+                text {
+                    font-size: 2em;
+                }
+                circle {
+                    mix-blend-mode: multiply;
+                }
+                .white {
+                    fill: #fff;
+                    mix-blend-mode: unset;
+                }
+                .blue {
+                    fill: var(--blue);
+                }
+                .yellow {
+                    fill: var(--yellow);
+                }
+                .pink {
+                    fill: var(--pink);
+                }
+
+            }
         </style>
      </head>
 <body>
@@ -150,7 +174,20 @@
 
     <div class="col">
         <figure class="center">
-            <img src="pastal.svg" alt="" style="max-width: 66%; min-width: 300px;">
+            <svg xmlns="http://www.w3.org/2000/svg" id="venn" xml:space="preserve" x="0" y="0" version="1.1" viewBox="0 0 800 800" style="max-width: 66%; min-width: 300px;">
+                <circle cx="246.4" cy="526.1" r="241.4" class="white"/>
+                <circle cx="551.9" cy="526.1" r="241.4" class="white"/>
+                <circle cx="398.4" cy="262.8" r="241.4" class="white"/>
+
+                <circle cx="246.4" cy="526.1" r="241.4" class="pink"/>
+                <circle cx="551.9" cy="526.1" r="241.4" class="yellow"/>
+                <circle cx="398.4" cy="262.8" r="241.4" class="blue"/>
+
+                <text transform="translate(325.1499 227.6167)">Usability</text>
+                <text transform="translate(69.9194 564.5557)">Beauty</text>
+                <text transform="translate(511.0615 564.5557)">Sustainablilty</text>
+            </svg>
+
             <figcaption>
                 <small><i>Vitruvius' three qualities of firmitatis, utilitatis and venustatis.</i></small>
             </figcaption>
@@ -191,7 +228,7 @@
 </div>
 
 <div class="p-t">
-    <h2 class="d-flex a-center">
+    <h2 class="d-flex">
         <img src="unicorn.svg" alt="" width="48" class="m-r">
         About
     </h2>
@@ -205,7 +242,7 @@
 <div class="p-t">
     <hr>
     <h3 class="p-t">Colophon</h3>
-    <p>This site is typeset using Gasoek One by <a href="https://jamo.works/shop/gasoek/" target="_blank">JAMO</a>, Noto Sans Mono by <a href="https://mattesontypographics.com/" target="_blank">Steven Matteson</a>. Images and icons were created using Figma and Adobe Illustrator and optimised for web using <a href="https://github.com/svg/svgo" target="_blank">svgomg</a> by <a href="https://jakearchibald.com/" target="_blank">Jake Archibold</a>.</p>
+    <p>This site is typeset using Gasoek One by <a href="https://jamo.works/shop/gasoek/" target="_blank">JAMO</a>, Noto Sans Mono by <a href="https://mattesontypographics.com/" target="_blank">Steven Matteson</a>. Images and icons were created using Figma and Adobe Illustrator and optimised for web using <a href="https://github.com/svg/svgo" target="_blank">svgomg</a>.</p>
 </div>
 </body>
 </html>
