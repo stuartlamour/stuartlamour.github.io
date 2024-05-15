@@ -48,7 +48,15 @@
                 margin: auto;
                 padding: 1rem;
             }
-
+            hr {
+                border: none;
+                padding: 1px 0;
+                background: linear-gradient(45deg,
+                    var(--blue),
+                    var(--yellow),
+                    var(--pink)
+                );
+            }
             .hero {
                 font-size: 6rem;
                 margin: 0;
@@ -125,9 +133,6 @@
             .orange {
                 color: var(--orange);
             }
-            .bg-orange {
-                background-color: var(--orange);
-            }
             #venn {
                 text {
                     font-size: 2em;
@@ -148,7 +153,6 @@
                 .pink {
                     fill: var(--pink);
                 }
-
             }
         </style>
      </head>
@@ -158,7 +162,7 @@
 
         <h1 class="hero">Stuart Lamour</h1>
         <p class="d-flex lead">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="orange m-r" height="1.5em" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="orange m-r" width="1.5em" aria-hidden="true">
                 <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clip-rule="evenodd" />
             </svg>
             User experience research, design, and developement.
@@ -175,6 +179,8 @@
     <div class="col">
         <figure class="center">
             <svg xmlns="http://www.w3.org/2000/svg" id="venn" xml:space="preserve" x="0" y="0" version="1.1" viewBox="0 0 800 800" style="max-width: 66%; min-width: 300px;">
+                <title>A Venn digram with 3 intersecting circles labeled Usability, Beauty, and Sustainablity - the 3 pillars of design according to Roman Architect Vitruvius.</title>
+
                 <circle cx="246.4" cy="526.1" r="241.4" class="white"/>
                 <circle cx="551.9" cy="526.1" r="241.4" class="white"/>
                 <circle cx="398.4" cy="262.8" r="241.4" class="white"/>
@@ -233,7 +239,7 @@
         About
     </h2>
     <div class="lead">
-        <p>I've been lucky enough to work with The BBC, Gov.uk, MoMa, The British Museum, The National Portrait Gallery, The NHS, Capita, ARUP, and The Labour Party on digital services. I've created SaaS products for Blackboard, Avado, Titus, and many other e-learning partners. I've worked extensively with universities and profesional developement providers including Sussex University, University of Strathclyde, The Royal College of GPs, The Royal College of Surgeons, Cass Business School, and most recently University College London (UCL) on their online learning.</p>
+        <p>I've been lucky enough to work with The BBC, Gov.uk, MoMa, The British Museum, The National Portrait Gallery, The NHS, The Ministry of Defence, Capita, ARUP, and The Labour Party on digital services. I've created SaaS products for Blackboard, Avado, Titus, and many other e-learning partners. I've worked extensively with universities and profesional developement providers including Sussex University, University of Strathclyde, The Royal College of GPs, The Royal College of Surgeons, Cass Business School, and most recently University College London (UCL) on their online learning.</p>
         <p>I'm able to hit the ground running with most projects, and use Jira and Github on a daily basis. I'm equally able to jump into LAMP/MAMP, Python, or JS based project architecture and make an immediate impact on the front end design, usability and accessibility.
         <p>I'm happiest mentoring and fostering a culture of Agile UX practice, helping solve problems through lasting culture change, and creating products people really enjoy using.</p>
     </div>
